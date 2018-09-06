@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<script type="text/javascript" src="src/creacional/composite_incorrecto.js"></script>
+	<script type="text/javascript" src="src/creacional/Abstract_Factory.js"></script>
+	<script type="text/javascript" src="src/Creacional/Factory_Method.js"></script>
+	<script type="text/javascript" src="src/Creacional/Prototype.js"></script>
+	<script type="text/javascript" src="src/Creacional/Singleton.js"></script>
+	<script type="text/javascript" src="src/Estructural/Adapter.js"></script>
+	<script type="text/javascript" src="src/Mini_Controller.js"></script>
+
+	<title>Restaurante Javeriana</title>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h1 style="text-align: center; margin-top: 50px;">Restaurante Javeriana</h1>
+				<h3 style="text-align: center;"">Menú especial</h3>
+				<form>
+					<div class="form-group">
+						<label for="selectControl">Paella</label>
+						<select multiple class="form-control" id="paellaType" onchange="getValueType(this)">
+					      <option value="Mariscos">Mariscos</option>
+					      <option value="Vegetariana">Vegetariana</option>
+					      <option value="CarnePollo">Carne y pollo</option>
+					    </select>
+					</div>
+					<div class="form-group">
+						<label>Seleccione el tipo de moneda</label>
+						<input type="text" class="form-control" placeholder="peso, dolar, euro" onchange="getValueCoin(this)">
+					</div>
+					<div class="form-group">
+						<label for="selectControl">Precio paella</label>
+						<select multiple class="form-control" id="paellaPrice" onchange="getValuePrice(this)">
+					      <option value="12000">$12.000 pequeña</option>
+					      <option value="25000">$25.000 mediana</option>
+					      <option value="50000">$50.000 grande</option>
+					    </select>
+					</div>
+					<div class="form-group">
+						<span class="input-group-text" id="basic-addon3"><b>Todos los platos contienen:</b> <i>Ensalada tropical</i></span>
+					</div>
+
+					<div class="form-group col-md-12 text-center"> 
+					    <button type="button" class="btn btn-success" onclick="buildPaella()">Realizar Pedido</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>	
+</body>
+</html>
